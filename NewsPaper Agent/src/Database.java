@@ -70,6 +70,7 @@ public class Database {
 			rs = stmt.executeQuery(cmd);
 			while (rs.next()) {
 				Customer_id = rs.getString(1);
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -652,7 +653,7 @@ public class Database {
 		}
 
 		String totalCost = Double.toString(total);
-		//System.out.println(total);
+		// System.out.println(total);
 		if (pubName == "" || total == 0.0) {
 			return "Invoice not generated\n";
 		} else {
